@@ -5,16 +5,12 @@
   height: 100%;
 }
 
-.app img {
-  margin: 1rem;
-  margin-right: auto;
-}
-
 .content-container {
   background-color: white;
   border-radius: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  height: 100rem;
+  height: 50rem;
   margin-bottom: 5rem;
   width: 80%;
+  overflow: hidden;
 }

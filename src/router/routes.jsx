@@ -1,6 +1,7 @@
 import Home from "../pages/Home/Home";
-import MeetUs from "../pages/MeetUs/MeetUs";
 import Profiflex from "../pages/Profiflex/Profiflex";
+import TartarRemoval from "../pages/TartarRemoval/TartarRemoval";
+import MeetUs from "../pages/MeetUs/MeetUs";
 import FurrowClosure from "../pages/FurrowClosure/FurrowClosure";
 import Advice from "../pages/Advice/Advice";
 import GrindingPreventer from "../pages/GrindingPreventer/GrindingPreventer";
@@ -10,6 +11,12 @@ import TeethWhitening from "../pages/TeethWhitening/TeethWhitening";
 
 export const routes = [
   { id: 0, path: "/", element: <Home />, title: "Főoldal" },
+  {
+    id: 9,
+    path: "fogko-eltavolitas",
+    element: <TartarRemoval />,
+    title: "Fogkő eltávolítás",
+  },
   {
     id: 1,
     path: "/profiflex-sopolirozas",
