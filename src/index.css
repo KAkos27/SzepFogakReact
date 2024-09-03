@@ -13,6 +13,11 @@ body {
 }
 
 .icon {
+  background-image: url("./assets/ui-images/control-bar-icon.svg");
+  background-size: cover;
   cursor: pointer;
+  height: 2rem;
+  margin: 1rem;
+  margin-right: auto;
   width: 2rem;
 }

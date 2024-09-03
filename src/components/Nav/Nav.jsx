@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Modal from "../Modal/Modal";
-import menuIcon from "../../assets/ui-images/control-bar-icon.svg";
 import closeButton from "../../assets/ui-images/close-button-black.svg";
 import { routes } from "../../router/routes";
 import "./Nav.css";
@@ -16,12 +15,7 @@ const Nav = () => {
 
   return (
     <>
-      <img
-        className="icon"
-        src={menuIcon}
-        alt="Menü"
-        onClick={() => handleModalState(true)}
-      />
+      <span className="icon" onClick={() => handleModalState(true)}></span>
       <div className="wrapper" onClick={() => handleModalState(false)}>
         <Modal
           className="nav"

@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
+import NoPage from "../pages/NoPage/NoPage";
 import { routes } from "./routes";
 
 const Router = () => {
@@ -8,6 +9,7 @@ const Router = () => {
       {routes.map((route) => (
         <Route key={route.id} path={route.path} element={route.element} />
       ))}
+      <Route path="*" element={<NoPage />} />
     </Routes>
   );
 };
