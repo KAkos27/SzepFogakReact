@@ -9,6 +9,7 @@
 body {
   background-color: #efdfe2;
   font-family: "Poppins", sans-serif;
+  height: 100vh;
 }
 
 .icon {

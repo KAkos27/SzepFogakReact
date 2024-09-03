@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import Modal from "../Modal/Modal";
 import menuIcon from "../../assets/ui-images/control-bar-icon.svg";
 import closeButton from "../../assets/ui-images/close-button-black.svg";
+import { routes } from "../../router/routes";
 import "./Nav.css";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
 
-  const handleModalState = () => {
-    setOpen((prevSate) => !prevSate);
+  const handleModalState = (state) => {
+    setOpen(state);
   };
 
   return (
@@ -19,25 +20,29 @@ const Nav = () => {
         className="icon"
         src={menuIcon}
         alt="Menü"
-        onClick={handleModalState}
+        onClick={() => handleModalState(true)}
       />
-      <Modal className="nav" open={open}>
-        <img
-          className="icon"
-          src={closeButton}
-          alt="Bezár"
-          onClick={handleModalState}
-        />
-        <Link to="/">Fogkő eltávolítás</Link>
-        <Link to="/about">Profiflex sópolírozás</Link>
-        <Link to="/contact">Ismerkedés a rendelővel</Link>
-        <Link to="/contact">Barázdazárás</Link>
-        <Link to="/contact">Szájhigiénes tanácsadás</Link>
-        <Link to="/contact">Fogcsikorgatás gátló</Link>
-        <Link to="/contact">Fognyaki érzékenység csökkentés</Link>
-        <Link to="/contact">Fogékszer ragasztás</Link>
-        <Link to="/contact">Fogfehérítés</Link>
-      </Modal>
+      <div className="wrapper" onClick={() => handleModalState(false)}>
+        <Modal
+          className="nav"
+          open={open}
+          onEscape={() => handleModalState(false)}
+        >
+          <img
+            className="icon"
+            src={closeButton}
+            alt="Bezár"
+            onClick={() => handleModalState(false)}
+          />
+          <div className="link-container">
+            {routes.map((route) => (
+              <Link key={route.id} to={route.path}>
+                {route.title}
+              </Link>
+            ))}
+          </div>
+        </Modal>
+      </div>
     </>
   );
 };

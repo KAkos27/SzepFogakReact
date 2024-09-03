@@ -1,17 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Contact from "../pages/Contact";
-import NoPage from "../pages/NoPage";
+import { routes } from "./routes";
 
 const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="*" element={<NoPage />} />
+      {routes.map((route) => (
+        <Route key={route.id} path={route.path} element={route.element} />
+      ))}
     </Routes>
   );
 };
