@@ -7,9 +7,14 @@
 }
 
 body {
-  background-color: #efdfe2;
+  background: rgb(218, 169, 178);
+  background: linear-gradient(
+    0deg,
+    rgb(228, 186, 193) 0%,
+    rgba(239, 223, 226, 1) 100%
+  );
   font-family: "Poppins", sans-serif;
-  height: 100vh;
+  height: 100%;
 }
 
 .card {
