@@ -1,0 +1,32 @@
+.profiflex {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  height: 65%;
+  justify-content: center;
+}
+
+.profiflex .card--wide {
+  flex-direction: row;
+}
+
+.profiflex__image-container {
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  height: 24rem;
+  justify-content: center;
+  overflow: hidden;
+  width: 40rem;
+}
+
+.profiflex__image {
+  width: 40rem;
+}
+
+.card ul {
+  margin-left: 2rem;
+}
